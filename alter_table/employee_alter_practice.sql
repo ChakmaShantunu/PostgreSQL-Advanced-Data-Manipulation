@@ -53,3 +53,8 @@ ADD CONSTRAINT pk_employee_id PRIMARY KEY (id);
 -- drop constraint (table label constraint)
 ALTER TABLE employee
 DROP CONSTRAINT unique_employee_email;
+
+-- Add multiple columns
+ALTER TABLE employee
+ADD COLUMN address varchar(200),
+ADD COLUMN phone varchar(20) UNIQUE NOT NULL;
