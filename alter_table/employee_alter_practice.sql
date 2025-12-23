@@ -46,3 +46,6 @@ VALUES
 -- add constraint (table label constraint)
 ALTER TABLE employee
 ADD CONSTRAINT unique_employee_email UNIQUE (email);
+
+ALTER TABLE employee
+ADD CONSTRAINT pk_employee_id PRIMARY KEY (id);
