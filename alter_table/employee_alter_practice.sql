@@ -32,3 +32,13 @@ SET
 ALTER TABLE employee
 ALTER COLUMN email
 DROP NOT NULL;
+
+-- set default value
+ALTER TABLE employee
+ALTER COLUMN email
+SET DEFAULT 'test@gmail.com';
+
+INSERT INTO
+  employee (user_name, age)
+VALUES
+  ('Supta', 23);
