@@ -42,3 +42,7 @@ INSERT INTO
   employee (user_name, age)
 VALUES
   ('Supta', 23);
+
+-- add constraint (table label constraint)
+ALTER TABLE employee
+ADD CONSTRAINT unique_employee_email UNIQUE (email);
