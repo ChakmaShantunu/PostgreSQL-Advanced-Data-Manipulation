@@ -1,6 +1,6 @@
 -- create table
 CREATE TABLE
-    employe (id serial, name varchar(100), age int);
+  employe (id serial, name varchar(100), age int);
 
 -- rename table
 ALTER TABLE employe
@@ -26,7 +26,7 @@ ALTER COLUMN user_name type varchar(50);
 ALTER TABLE employee
 ALTER COLUMN email
 SET
-    NOT NULL;
+  NOT NULL;
 
 -- drip constraint
 ALTER TABLE employee
@@ -44,11 +44,9 @@ VALUES
   ('Supta', 23);
 
 -- add constraint (table label constraint)
-ALTER TABLE employee
-ADD CONSTRAINT unique_employee_email UNIQUE (email);
+ALTER TABLE employee ADD CONSTRAINT unique_employee_email UNIQUE (email);
 
-ALTER TABLE employee
-ADD CONSTRAINT pk_employee_id PRIMARY KEY (id);
+ALTER TABLE employee ADD CONSTRAINT pk_employee_id PRIMARY KEY (id);
 
 -- drop constraint (table label constraint)
 ALTER TABLE employee
@@ -58,3 +56,265 @@ DROP CONSTRAINT unique_employee_email;
 ALTER TABLE employee
 ADD COLUMN address varchar(200),
 ADD COLUMN phone varchar(20) UNIQUE NOT NULL;
+
+CREATE TABLE
+  students (
+    student_id serial PRIMARY KEY,
+    first_name varchar(50),
+    last_name varchar(50),
+    age int,
+    grade char(2),
+    course varchar(50),
+    email varchar(100) UNIQUE,
+    dob date,
+    blood_group varchar(5),
+    country varchar(50)
+  );
+
+INSERT INTO
+  students (
+    first_name,
+    last_name,
+    age,
+    grade,
+    course,
+    email,
+    dob,
+    blood_group,
+    country
+  )
+VALUES
+  (
+    'Arif',
+    'Haque',
+    16,
+    'A+',
+    'Mathematics',
+    'arif.haque@example.com',
+    '2009-05-12',
+    'A+',
+    'Bangladesh'
+  ),
+  (
+    'Nabila',
+    'Khan',
+    17,
+    'B',
+    'Physics',
+    'nabila.khan@example.com',
+    '2008-11-20',
+    'B+',
+    'Bangladesh'
+  ),
+  (
+    'Rafiq',
+    'Chowdhury',
+    15,
+    'A',
+    'Chemistry',
+    'rafiq.chowdhury@example.com',
+    '2009-08-03',
+    'O+',
+    'Bangladesh'
+  ),
+  (
+    'Sabrina',
+    'Rahman',
+    16,
+    'B+',
+    'Biology',
+    'sabrina.rahman@example.com',
+    '2009-02-15',
+    'A-',
+    'Bangladesh'
+  ),
+  (
+    'Imran',
+    'Hasan',
+    17,
+    'C',
+    'Computer Science',
+    'imran.hasan@example.com',
+    '2008-12-05',
+    'AB+',
+    'Bangladesh'
+  ),
+  (
+    'Tania',
+    'Akter',
+    15,
+    'A',
+    'Mathematics',
+    'tania.akter@example.com',
+    '2009-06-30',
+    'B-',
+    'Bangladesh'
+  ),
+  (
+    'Fahim',
+    'Uddin',
+    16,
+    'B',
+    'Physics',
+    'fahim.uddin@example.com',
+    '2009-03-22',
+    'O-',
+    'Bangladesh'
+  ),
+  (
+    'Mahi',
+    'Islam',
+    17,
+    'A+',
+    'Chemistry',
+    'mahi.islam@example.com',
+    '2008-09-18',
+    'AB-',
+    'Bangladesh'
+  ),
+  (
+    'Sami',
+    'Rahim',
+    15,
+    'C+',
+    'Biology',
+    'sami.rahim@example.com',
+    '2009-01-10',
+    'A+',
+    'Bangladesh'
+  ),
+  (
+    'Nafisa',
+    'Begum',
+    16,
+    'B+',
+    'Computer Science',
+    'nafisa.begum@example.com',
+    '2009-04-25',
+    'O+',
+    'Bangladesh'
+  ),
+  (
+    'Jahid',
+    'Sultana',
+    17,
+    'A',
+    'Mathematics',
+    'jahid.sultana@example.com',
+    '2008-07-07',
+    'B+',
+    'Bangladesh'
+  ),
+  (
+    'Anika',
+    'Hossain',
+    15,
+    'B+',
+    'Physics',
+    'anika.hossain@example.com',
+    '2009-10-12',
+    'A-',
+    'Bangladesh'
+  ),
+  (
+    'Rony',
+    'Karim',
+    16,
+    'C',
+    'Chemistry',
+    'rony.karim@example.com',
+    '2009-06-01',
+    'O+',
+    'Bangladesh'
+  ),
+  (
+    'Sharmin',
+    'Shah',
+    17,
+    'A+',
+    'Biology',
+    'sharmin.shah@example.com',
+    '2008-08-14',
+    'AB+',
+    'Bangladesh'
+  ),
+  (
+    'Tanvir',
+    'Chakma',
+    15,
+    'B',
+    'Computer Science',
+    'tanvir.chakma@example.com',
+    '2009-03-30',
+    'B-',
+    'Bangladesh'
+  ),
+  (
+    'Labiba',
+    'Parvin',
+    16,
+    'C+',
+    'Mathematics',
+    'labiba.parvin@example.com',
+    '2009-01-25',
+    'O-',
+    'Bangladesh'
+  ),
+  (
+    'Fahad',
+    'Rahman',
+    17,
+    'A',
+    'Physics',
+    'fahad.rahman@example.com',
+    '2008-11-09',
+    'A+',
+    'Bangladesh'
+  ),
+  (
+    'Munira',
+    'Akhtar',
+    15,
+    'B+',
+    'Chemistry',
+    'munira.akhtar@example.com',
+    '2009-05-18',
+    'B+',
+    'Bangladesh'
+  ),
+  (
+    'Rashed',
+    'Haque',
+    16,
+    'A+',
+    'Biology',
+    'rashed.haque@example.com',
+    '2009-02-28',
+    'AB-',
+    'Bangladesh'
+  ),
+  (
+    'Sumaiya',
+    'Khatun',
+    17,
+    'C',
+    'Computer Science',
+    'sumaiya.khatun@example.com',
+    '2008-09-05',
+    'O+',
+    'Bangladesh'
+  );
+
+-- Using select
+select
+  *
+from
+  students;
+
+select
+  first_name,
+  last_name,
+  age,
+  blood_group
+from
+  students;
