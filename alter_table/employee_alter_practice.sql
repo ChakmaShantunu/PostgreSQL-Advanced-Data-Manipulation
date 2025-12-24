@@ -450,3 +450,32 @@ WHERE
     OR grade = 'B'
   )
   AND course IN ('Physics', 'Mathematics');
+
+-- Comparison, BETWEEN & IN
+SELECT
+  country
+FROM
+  students
+WHERE
+  country != 'Nepal';
+
+SELECT
+  country
+FROM
+  students
+WHERE
+  country <> 'Nepal';
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  age BETWEEN 15 AND 16;
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  country IN ('Bangladesh', 'India', 'Nepal');
