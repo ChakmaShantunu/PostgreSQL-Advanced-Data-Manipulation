@@ -364,3 +364,43 @@ SELECT DISTINCT
   country
 FROM
   students;
+
+SELECT DISTINCT
+  course
+FROM
+  students;
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  country = 'Thailand';
+
+SELECT
+  first_name AS "First Name",
+  age,
+  course
+FROM
+  students
+WHERE
+  country = 'Thailand';
+
+SELECT
+  first_name AS "First Name",
+  age,
+  course,
+  country
+FROM
+  students
+WHERE
+  course IN ('Physics', 'Chemistry');
+
+SELECT
+  first_name AS "First Name",
+  age,
+  course
+FROM
+  students
+WHERE
+  age < 18;
