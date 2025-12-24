@@ -358,3 +358,9 @@ FROM
   students
 ORDER BY
   student_id ASC;
+
+-- Distinct and Where filtering
+SELECT DISTINCT
+  country
+FROM
+  students;
