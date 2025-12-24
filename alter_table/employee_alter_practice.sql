@@ -324,3 +324,37 @@ SELECT
   age AS "Student Age"
 FROM
   students;
+
+-- Sorting
+SELECT
+  first_name,
+  country,
+  blood_group,
+  age
+FROM
+  students
+ORDER BY
+  age DESC
+LIMIT
+  5;
+
+SELECT
+  first_name,
+  country,
+  blood_group,
+  age
+FROM
+  students
+ORDER BY
+  grade ASC,
+  age ASC;
+
+SELECT
+  first_name,
+  country,
+  blood_group,
+  age
+FROM
+  students
+ORDER BY
+  student_id ASC;
