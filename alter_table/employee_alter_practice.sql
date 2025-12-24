@@ -404,3 +404,49 @@ FROM
   students
 WHERE
   age < 18;
+
+-- Filtering with AND & OR
+SELECT
+  first_name AS "First Name",
+  age,
+  course,
+  country,
+  grade
+FROM
+  students
+WHERE
+  course IN ('Physics', 'Chemistry')
+  OR grade = 'A';
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  country = 'India'
+  OR country = 'Bangladesh';
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  (
+    grade = 'A'
+    OR grade = 'B'
+  )
+  AND (
+    course = 'Physics'
+    OR course = 'Mathematics'
+  );
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  (
+    grade = 'A'
+    OR grade = 'B'
+  )
+  AND course IN ('Physics', 'Mathematics');
