@@ -318,3 +318,9 @@ select
   blood_group
 from
   students;
+
+SELECT
+  first_name AS "First Name",
+  age AS "Student Age"
+FROM
+  students;
