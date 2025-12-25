@@ -479,3 +479,11 @@ FROM
   students
 WHERE
   country IN ('Bangladesh', 'India', 'Nepal');
+
+SELECT
+  *
+FROM
+  students
+WHERE
+  grade = 'C'
+  AND course = 'Computer Science';
