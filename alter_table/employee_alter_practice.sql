@@ -509,3 +509,34 @@ from
   students
 where
   last_name ilike '%n';
+
+--NOT & Scalar Functions
+select
+  country
+from
+  students
+where
+  not country = 'Bangladesh';
+
+select
+  grade
+from
+  students
+where
+  not grade = 'A';
+
+--Scalar Functions
+select
+  upper(first_name)
+from
+  students;
+
+select
+  lower(first_name)
+from
+  students;
+
+select
+  concat (first_name, ' ', last_name)
+from
+  students;
