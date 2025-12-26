@@ -487,3 +487,25 @@ FROM
 WHERE
   grade = 'C'
   AND course = 'Computer Science';
+
+--LIKE vs ILIKE
+select
+  *
+from
+  students
+where
+  first_name like 'A%';
+
+select
+  *
+from
+  students
+where
+  email ilike 'A%';
+
+select
+  *
+from
+  students
+where
+  last_name ilike '%n';
